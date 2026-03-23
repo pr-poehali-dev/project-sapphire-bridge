@@ -1,5 +1,6 @@
 import GradientBlinds from "@/components/GradientBlinds"
 import Navbar from "@/components/Navbar"
+import Icon from "@/components/ui/icon"
 
 const Index = () => {
   return (
@@ -9,7 +10,7 @@ const Index = () => {
       {/* Animated Gradient Background */}
       <div className="fixed inset-0 w-full h-full flex items-center justify-center">
         <GradientBlinds
-          gradientColors={["#0f1629", "#1e3a8a", "#2563eb", "#1d4ed8"]}
+          gradientColors={["#0a0f1e", "#0f2a4a", "#1a3a6e", "#0f1e3d"]}
           angle={15}
           noise={0.25}
           blindCount={13}
@@ -29,26 +30,50 @@ const Index = () => {
         <div className="flex-1 flex items-center justify-center">
           <div className="flex items-center justify-center min-h-screen w-full px-5 sm:px-20">
             <div className="relative z-10 flex max-w-4xl flex-col items-center gap-8 text-center">
+
+              <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm text-white/80 backdrop-blur-sm">
+                <Icon name="MapPin" size={14} />
+                <span>Российская компания · Прямые поставки из Китая</span>
+              </div>
+
               <h1 className="text-5xl font-bold leading-tight tracking-tight text-white md:text-7xl text-balance drop-shadow-2xl">
-                Аналитика данных
+                Комплектующие
                 <br />
-                нового поколения
+                для дронов
               </h1>
               <p className="text-xl text-white/90 max-w-3xl text-pretty drop-shadow-lg">
-                Визуализируйте данные в реальном времени, получайте мгновенные инсайты и принимайте решения на основе точной аналитики.
+                Прямые поставки из Китая без посредников, собственное производство литий-ионных АКБ в России и строгий контроль качества на каждом этапе.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mt-4">
                 <button className="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-lg font-semibold text-black transition-all hover:bg-white/90 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-transparent shadow-2xl">
-                  Начать бесплатно
+                  Получить предложение
                 </button>
                 <button className="inline-flex items-center justify-center rounded-full border-2 border-white/30 bg-white/10 px-8 py-4 text-lg font-semibold text-white backdrop-blur transition-all hover:bg-white/20 hover:border-white/50 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-transparent shadow-xl">
-                  Смотреть демо
-                  <svg className="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
+                  О компании
+                  <Icon name="ArrowRight" size={20} className="ml-2" />
                 </button>
               </div>
+
+              {/* Преимущества */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8 w-full max-w-3xl">
+                <div className="flex flex-col items-center gap-2 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm p-5">
+                  <Icon name="Package" size={28} className="text-blue-300" />
+                  <span className="text-white font-semibold text-sm">Без посредников</span>
+                  <span className="text-white/60 text-xs text-center">Прямые поставки — лучшая цена</span>
+                </div>
+                <div className="flex flex-col items-center gap-2 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm p-5">
+                  <Icon name="Zap" size={28} className="text-blue-300" />
+                  <span className="text-white font-semibold text-sm">Собственное производство</span>
+                  <span className="text-white/60 text-xs text-center">Литий-ионные АКБ made in Russia</span>
+                </div>
+                <div className="flex flex-col items-center gap-2 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm p-5">
+                  <Icon name="ShieldCheck" size={28} className="text-blue-300" />
+                  <span className="text-white font-semibold text-sm">Контроль качества</span>
+                  <span className="text-white/60 text-xs text-center">На всех этапах логистики</span>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
